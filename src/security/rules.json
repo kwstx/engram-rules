@@ -1,0 +1,16 @@
+[
+    {
+        "id": "aws-key-leak",
+        "pattern": "(AKIA[0-9A-Z]{16})",
+        "detectionMethod": "regex",
+        "message": "CRITICAL: AWS Access Key ID detected. Do not commit this.",
+        "enforcementLevel": "error"
+    },
+    {
+        "id": "generic-password",
+        "pattern": "password\\s*=\\s*['\"]123456['\"]",
+        "detectionMethod": "regex",
+        "message": "Security: Hardcoded weak password detected.",
+        "enforcementLevel": "error"
+    }
+]

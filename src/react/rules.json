@@ -1,0 +1,16 @@
+[
+    {
+        "id": "react-hook-loop",
+        "pattern": "useEffect\\s*\\(\\s*\\(\\)\\s*=>\\s*\\{[\\s\\S]*?set[A-Z][a-zA-Z]*\\s*\\(",
+        "detectionMethod": "regex",
+        "message": "Potential Infinite Loop: Setting state inside useEffect without careful dependency management.",
+        "enforcementLevel": "info"
+    },
+    {
+        "id": "react-key-index",
+        "pattern": "key=\\{index\\}",
+        "detectionMethod": "regex",
+        "message": "Anti-Pattern: Using array index as key can cause rendering bugs. Use a unique ID instead.",
+        "enforcementLevel": "error"
+    }
+]

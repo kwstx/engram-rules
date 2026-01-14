@@ -1,0 +1,16 @@
+[
+    {
+        "id": "python-print-debug",
+        "pattern": "print\\(",
+        "detectionMethod": "regex",
+        "message": "Vibe Check: Leftover 'print()' statement. Use logging or remove.",
+        "enforcementLevel": "info"
+    },
+    {
+        "id": "pandas-iterator",
+        "pattern": "for\\s+index,\\s*row\\s+in\\s+.*\\.iterrows\\(\\):",
+        "detectionMethod": "regex",
+        "message": "Performance: iterrows() is slow. Vectorize this operation.",
+        "enforcementLevel": "info"
+    }
+]
